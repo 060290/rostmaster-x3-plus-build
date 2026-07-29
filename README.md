@@ -20,8 +20,8 @@ Personal robotics project built on the Yahboom ROSMASTER X3 PLUS platform.
 ## Network
 | Item | Value |
 |---|---|
-| Jetson username | ketson |
-| SSH command | ssh ketson@192.168.1.11 |
+| Jetson username | jetson |
+| SSH command | ssh jetson@192.168.1.11 | *changes when you are connected to home wifi
 
 If IP changed run on Jetson: ip addr show wlP1p1s0
 
@@ -67,7 +67,7 @@ ros2 run nav2_map_server map_saver_cli -f ~/maps/home_room
 
 ### Copy Map to Mac
 Run on Mac terminal:
-scp ketson@192.168.1.11:~/maps/home_room.pgm ~/Desktop/home_room.pgm
+scp jetson@192.168.1.11:~/maps/home_room.pgm ~/Desktop/home_room.pgm
 
 ## Mapping Tips
 - Drive slowly
