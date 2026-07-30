@@ -112,3 +112,19 @@ Always unplug Deans connector from robot before charging.
 - [ ] Decide arm control approach (ros1_bridge vs direct serial)
 - [ ] Train YOLO on marker for pickup task
 - [ ] Integrate voice command trigger
+
+## Teleop behavior — important
+teleop_twist_keyboard LATCHES the last command. It does not stop when you release a key.
+
+- Press I → robot moves forward continuously until you press something else
+- Press K → full stop (this is the real stop key, not B)
+- Press , → robot moves backward continuously
+
+Speed control:
+- Z → decrease speed (press several times before moving)
+- Q → increase speed
+- W/X → increase/decrease linear speed only
+
+For mapping: press Z several times to lower speed first, then tap
+movement keys briefly and press K immediately for small precise movements.
+Never hold a direction key while mapping.
